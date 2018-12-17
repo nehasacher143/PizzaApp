@@ -1,0 +1,40 @@
+{
+  "pizzas": [
+    {
+      "pizza": "Paneer Makhni",
+      "crust": "Cheese Burst",
+      "toppings": "Panner, Capsicum, White Sauce",
+      "price": "500"
+    },
+    {
+      "pizza": "FarmHouse",
+      "crust": "Wheat Thin Crust",
+      "toppings": "Red Bell Pepper, Yellow Bell Pepper, Onion",
+      "price": "300"
+    },
+    {
+      "pizza": "Margherita",
+      "crust": "Hand Tossed",
+      "toppings": "Only Cheese",
+      "price": "100"
+    },
+    {
+      "pizza": "Golden Corn",
+      "crust": "Fresh Pan Pizza",
+      "toppings": "Cheese and Corns",
+      "price": "75"
+    },
+    {
+      "pizza": "Peppy Panner",
+      "crust": "Multi Grain",
+      "toppings": "Paneer, Capsicum, Red paprika",
+      "price": ""
+    },
+    {
+      "pizza": "Peri Peri Chicken",
+      "crust": "Classic Hand Tossed",
+      "toppings": "Chicken Tikka, Onion",
+      "price": "600"
+    },
+]
+}

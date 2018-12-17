@@ -30,7 +30,7 @@
   <link rel="shortcut icon" href="favicon.ico" />
 
   <!-- Default style-sheet is for 'media' type screen (color computer display).  -->
-  <link rel="stylesheet" media="screen" href="css/style.css" >
+  <link rel="stylesheet" media="screen" href="assets/css/style.css" >
 
   <!-- html5shiv aka html5 shim. Supporting HTML5 and CSS for IE browsers less than IE9. -->
   <!--[if lt IE 9]>
@@ -40,8 +40,46 @@
 </head>
 
 <body>
-Hello is my first website..Welcome here
-<script src="js/vendors/jquery-1.8.3.min.js"></script>
-<script src="js/script.js"></script>
+
+<table id="entrydata">
+<thead>
+  <tr>
+    <td>Pizza</td>
+    <td>Crust</td>
+    <td>Toppings</td>
+    <td>Price</td>
+    <td>Action</td>
+  </tr>
+</thead>
+  <tbody>
+    
+  </tbody>
+</table>
+<script src="assets/vendor/jquery-1.8.3.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script>
+jQuery(function() {
+
+function loadJSON(callback) {   
+  var xobj = new XMLHttpRequest();
+  xobj.overrideMimeType("application/json");
+  xobj.open('GET', 'assets/json/pizzas.json', true);
+  xobj.onreadystatechange = function () {
+    if (xobj.readyState == 4 && xobj.status == "200") {
+      callback(JSON.parse(xobj.responseText));
+    }
+  };
+  xobj.send(null);  
+}
+loadJSON(function(json) {
+  jQuery.each(json, function(i, f) {
+    console.log(json);
+      var tblRow = "<tr>" + "<td>" + f.pizza + "</td>" + "<td>" + f.crust + "</td>" + "<td>" + f.toppings + "</td>" + "<td>" + f.price + "</td>" +  "<td>" + "Action" + "</td>" + "</tr>"
+      jQuery(tblRow).appendTo("#entrydata tbody");
+ });
+});
+
+});
+</script>
 </body>
 </html>
