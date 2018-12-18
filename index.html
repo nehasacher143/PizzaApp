@@ -66,17 +66,23 @@ function loadJSON(callback) {
   xobj.open('GET', 'assets/json/pizzas.json', true);
   xobj.onreadystatechange = function () {
     if (xobj.readyState == 4 && xobj.status == "200") {
-      callback(JSON.parse(xobj.responseText));
+      //console.log(typeof(xobj));
+      callback((xobj.responseText));
+      //console.log(((xobj.responseText)));
     }
   };
   xobj.send(null);  
 }
 loadJSON(function(json) {
-  jQuery.each(json, function(i, f) {
+  //var obj = JSON.parse(json);
+  /*jQuery.each(json, function() {
     console.log(json);
       var tblRow = "<tr>" + "<td>" + f.pizza + "</td>" + "<td>" + f.crust + "</td>" + "<td>" + f.toppings + "</td>" + "<td>" + f.price + "</td>" +  "<td>" + "Action" + "</td>" + "</tr>"
       jQuery(tblRow).appendTo("#entrydata tbody");
- });
+ });*/
+ jQuery.each(json, function(key,value) {
+  console.log(json);
+}); 
 });
 
 });
