@@ -21,68 +21,9 @@ loadJSON(function(json) {
  $('#resultData').html('');
   $.each(json.pizzas, function(key,value){
     console.log(key+1);
-      $('#resultData').append('<tr><td>'+value.pizza+'</td><td>'+value.crust+'</td><td>'+value.toppings+'</td><td>'+value.price+'</td><td>'+'<button class="btn btn-danger my-cart-btn" data-id="' +(key+1)+ '" data-name="'+
-        value.pizza+'" data-price="'+ value.price +'" data-quantity="1">Add to Cart</button>'+'</td></tr>');
+      $('#resultData').append('<tr class="sc-product-item"><td data-name="product_name">'+value.pizza+'</td><td data-name="product_desc">'+value.crust+'</td><td data-name="product_desc">'+value.toppings+'</td><td> <input name="product_price" value="'+value.price+'" type="hidden" />'+value.price+'</td><td>'+'<input name="product_id" value="'+(key+1)+'" type="hidden" /><button class="btn btn-primary sc-add-to-cart">Add to Cart</button>'+'</td></tr>');
   });
 
 });
-
-
-
-
-var goToCartIcon = function($addTocartBtn){
-    var $cartIcon = $(".my-cart-icon");
-    var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
-    $addTocartBtn.prepend($image);
-    var position = $cartIcon.position();
-    $image.animate({
-      top: position.top,
-      left: position.left
-    }, 500 , "linear", function() {
-      $image.remove();
-    });
-  }
-
-  $('.my-cart-btn').myCart({
-    classCartIcon: 'my-cart-icon',
-    classCartBadge: 'my-cart-badge',
-    affixCartIcon: true,
-    checkoutCart: function(products) {
-      $.each(products, function(){
-        console.log(this);
-      });
-    },
-    clickOnAddToCart: function($addTocart){
-      goToCartIcon($addTocart);
-    },
-    getDiscountPrice: function(products) {
-      var total = 0;
-      $.each(products, function(){
-        total += this.quantity * this.price;
-      });
-      return total;
-    }
-  });
+$('#smartcart').smartCart();
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
