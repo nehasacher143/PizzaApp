@@ -155,3 +155,11 @@ sub { bottom: -.25em; }
   font-style: normal;
   font-weight: bold;
 }
+
+.my-container {
+  position: relative;
+}
+.my-cart-icon {
+  position: absolute;
+  right: 0;
+}
