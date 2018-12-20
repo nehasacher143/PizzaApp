@@ -45,10 +45,10 @@
             ajaxSettings: {} // Ajax extra settings for submit call
         },
         currencySettings: {
-            locales: 'en-US', // A string with a BCP 47 language tag, or an array of such strings
+            locales: 'IN', // A string with a BCP 47 language tag, or an array of such strings
             currencyOptions: {
                 style: 'currency',
-                currency: 'USD',
+                currency: 'INR',
                 currencyDisplay: 'symbol'
             } // extra settings for the currency formatter. Refer: https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
         },
