@@ -21,11 +21,18 @@ loadJSON(function(json) {
  jQuery('#resultData').html('');
  jQuery.each(json.pizzas, function(key,value){
     console.log(key+1);
-     jQuery('#resultData').append('<tr class="sc-product-item"><td data-name="product_name">'+value.pizza+'</td><td>'+value.crust+'</td><td data-name="product_desc">'+value.toppings+'</td><td> '+value.price+'</td><td>'+'<input name="product_price" value="'+value.price+'" type="hidden" /><input name="product_id" value="'+(key+1)+'" type="hidden" /><button class="btn btn-primary sc-add-to-cart">Add to Cart</button>'+'</td></tr>');
+     jQuery('#resultData').append('<tr><td class="item-name">'+value.pizza+'</td><td>'+value.crust+'</td><td>'+value.toppings+'</td><td class="item-price"> '+value.price+'</td><td>'+'<button class="btn btn-primary sc-add-to-cart" data-name="'+value.pizza+'" data-price="'+value.price+'" type="submit">Add to Cart</button>'+'</td></tr>');
   });
 
 });
 jQuery(document).ready(function(){
-jQuery('#smartcart').smartCart();
+$('#cart').simpleCart({
+    addtoCartClass: '.sc-add-to-cart',
+    cartProductListClass: '.cart-products-list',
+    totalCartCountClass: '.total-cart-count',
+    totalCartCostClass: '.total-cart-cost',
+    showcartID : '#show-cart',
+    itemCountClass : '.item-count'
+  });
 });
 });

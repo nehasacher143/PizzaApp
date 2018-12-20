@@ -8,41 +8,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="shortcut icon" href="favicon.ico" />
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/smart_cart.min.css">
+  <link rel="stylesheet" href="assets/css/simple_csdadart.css">
   <link rel="stylesheet" href="assets/css/font-awesome.min.css">
   <!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet"> -->
   <link rel="stylesheet" media="screen" href="assets/css/style.css" >
 </head>
 <body>
-  <p>http://techlaboratory.net/smartcart/documentation</p>
-  <p>http://vadendesign.com/projects/jquery-cart/</p>
+  <div class="container my-container">
+    <table id="entrydata" class="table">
+      <thead>
+        <tr>
+          <th>Pizza</th>
+          <th>Crust</th>
+          <th>Toppings</th>
+          <th>Price</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="resultData">
 
-<div class="container my-container">
-<table id="entrydata" class="table">
-<thead>
-  <tr>
-    <th>Pizza</th>
-    <th>Crust</th>
-    <th>Toppings</th>
-    <th>Price</th>
-    <th>Action</th>
-  </tr>
-</thead>
-  <tbody id="resultData">
-    
-  </tbody>
-</table>
-<form>
-    <div id="smartcart"></div>
-    </form>
+      </tbody>
+    </table>
+    <div id="cart"></div>
 
-</div>
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/jquery.smartCart.js"></script>
-<script src="assets/js/script.js"></script>
-<script>
+  </div>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jQuery.SimpleCart.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script>
 
-</script>
+  </script>
 </body>
 </html>
