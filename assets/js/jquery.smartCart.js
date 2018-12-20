@@ -20,7 +20,7 @@
         theme: 'default', // theme for the cart, related css need to include for other than default theme
         combineProducts: true, // combine similar products on cart
         highlightEffect: true, // highlight effect on adding/updating product in cart
-        cartItemTemplate: '<img class="img-responsive pull-left" src="{product_image}" /><h4 class="list-group-item-heading">{product_name}</h4><p class="list-group-item-text">{product_desc}</p>',
+        cartItemTemplate: '<h4 class="list-group-item-heading">{product_name}</h4><p class="list-group-item-text">{product_desc}</p>',
         cartItemQtyTemplate: '{display_price} × {display_quantity} = {display_amount}',
         productContainerSelector: '.sc-product-item',
         productElementSelector: '*', // input, textarea, select, div, p
