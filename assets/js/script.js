@@ -21,7 +21,7 @@ loadJSON(function(json) {
  jQuery('#resultData').html('');
  jQuery.each(json.pizzas, function(key,value){
     console.log(key+1);
-     jQuery('#resultData').append('<tr><td class="item-name">'+value.pizza+'</td><td>'+value.crust+'</td><td>'+value.toppings+'</td><td class="item-price"> '+value.price+'</td><td>'+'<button class="btn btn-primary sc-add-to-cart" data-name="'+value.pizza+'" data-price="'+value.price+'" type="submit">Add to Cart</button>'+'</td></tr>');
+     jQuery('#resultData').append('<tr><td class="item-name">'+value.pizza+'</td><td>'+value.crust+'</td><td>'+value.toppings+'</td><td class="item-price">'+value.price+'</td><td>'+'<button class="btn btn-primary sc-add-to-cart" data-name="'+value.pizza+'" data-price="'+value.price+'" type="submit">Add to Cart</button>'+'</td></tr>');
   });
 
 });
